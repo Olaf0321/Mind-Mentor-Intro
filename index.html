@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロジェクト紹介</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><i class="fab fa-node-js"></i> Olaf0321</a>
+    </header>
+
+    <main>
+        <h1 class="main-title">Mind-Mentor-AI</h1>
+
+        <!-- 代表画像 -->
+        <div class="main-image">
+            <img src="images/1.png" alt="代表火傷">
+        </div>
+
+        <!-- 下の2つの画像 -->
+        <div class="burns">
+            <img class="burn" src="images/2.png" alt="火傷サブ1">
+            <img class="burn" src="images/3.png" alt="火傷サブ2">
+        </div>
+
+        <div class="description">
+            <p>
+                MindMentorは、AIによる個別指導を提供する教育支援プラットフォームです。
+                生徒が各教科のAIチューターと会話しながら学習を進められるように設計されており、
+                パーソナライズされた理解のサポートと復習が可能です。
+            </p>
+
+            <p>
+                本アプリケーションはReact（フロントエンド）とFastAPI（バックエンド）で構成され、
+                OpenAIのAssistants APIを活用して文脈に沿った応答を提供します。
+                また、ユーザーデータとチャット履歴はFirebaseにて管理されています。
+            </p>
+
+            <h2>📘 プロジェクト概要</h2>
+            <p>
+                MindMentorは、学習者にとってスケーラブルかつアクセス可能な教育体験を提供するために開発された、
+                AI搭載の教育プラットフォームです。
+            </p>
+
+            <h2>🎯 主な機能</h2>
+            <ul>
+                <li>生徒は登録された教科の中から選択し、AIチューターと対話を開始できます。</li>
+                <li>スレッド形式での会話により、自然で継続的な学習が可能です。</li>
+                <li>会話の文脈を保持し、フォローアップの質問にも対応できます。</li>
+                <li>チャット履歴は教科・日付ごとに整理され、復習に役立ちます。</li>
+                <li>学習進捗が可視化され、自己管理型の学習が促進されます。</li>
+            </ul>
+
+            <h2>⚙️ 技術スタック</h2>
+            <ul>
+                <li>フロントエンド：React</li>
+                <li>バックエンド：FastAPI</li>
+                <li>AIエンジン：OpenAI Assistants API</li>
+                <li>データベース／ストレージ：Firebase</li>
+            </ul>
+
+            <h2>🧪 現在の技術的課題と検討事項</h2>
+            <ul>
+                <li>資料ベースの質問応答：アップロードされたドキュメントに基づき、明確かつ簡潔な応答を行います。</li>
+                <li>会話の文脈維持：セッション内で会話の流れを維持します。</li>
+                <li>高速応答：原則として1〜3秒以内に応答。</li>
+                <li>学習内容のインデックス作成：資料の目次をもとにインデックスを作成。</li>
+                <li>学習履歴の整理：過去の会話は教科・日付別に保存。</li>
+                <li>文脈に基づく回答：教科・トピックに応じた意味のある応答。</li>
+            </ul>
+
+            <h2>🎓 ユースケース</h2>
+            <ul>
+                <li>生徒が学校から帰宅し、「今日習ったトピック」を入力するとAIチューターが対応。</li>
+                <li>学習内容の復習サポート</li>
+                <li>短いクイズ形式で理解度をチェック</li>
+                <li>結果に基づき、フィードバックを提供（理解できている点、苦手な点の明示）</li>
+                <li>AIチューターは実際の先生のように学習を支援、理解度向上と自主的な学びをサポート</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Olaf0321. All rights reserved.
+        <a href="https://github.com/Olaf0321/Mind-Mentor-AI">GitHub</a>
+    </footer>
+
+</body>
+
+</html>
