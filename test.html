@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロジェクト紹介</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全体リセット */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #fff;
+        }
+
+        /* ヘッダー */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #00ff99;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .logo:hover {
+            color: #ffcc00;
+        }
+
+        /* 中間部分 */
+        main {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .burns {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .burn {
+            width: 300px;
+            height: 200px;
+            /* background: url('https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZpcmV8ZW58MHx8fHwxNjg0NzQyOTg1&ixlib=rb-4.0.3&q=80&w=400') center/cover no-repeat; */
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .burn:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* フッター */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px 50px;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        footer a {
+            color: #00ff99;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffcc00;
+        }
+
+        /* 代表画像 */
+        .main-image img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            margin-bottom: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .main-image img:hover {
+            transform: scale(1.03) rotate(1deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        /* 下2つの画像 */
+        .burns img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .burns img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        .description {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+
+        .description h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #00ff99;
+        }
+
+        .description ul {
+            list-style: disc inside;
+            margin-left: 20px;
+        }
+
+        .description li {
+            margin-bottom: 8px;
+        }
+
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            .burns {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><i class="fab fa-node-js"></i> Olaf0321</a>
+    </header>
+
+    <main>
+        <h1 class="main-title">Mind-Mentor-AI</h1>
+
+        <!-- 代表画像 -->
+        <div class="main-image">
+            <img src="1.png" alt="代表火傷">
+        </div>
+
+        <!-- 下の2つの画像 -->
+        <div class="burns">
+            <img class="burn" src="2.png" alt="火傷サブ1">
+            <img class="burn" src="3.png" alt="火傷サブ2">
+        </div>
+
+        <div class="description">
+            <p>
+                MindMentorは、AIによる個別指導を提供する教育支援プラットフォームです。
+                生徒が各教科のAIチューターと会話しながら学習を進められるように設計されており、
+                パーソナライズされた理解のサポートと復習が可能です。
+            </p>
+
+            <p>
+                本アプリケーションはReact（フロントエンド）とFastAPI（バックエンド）で構成され、
+                OpenAIのAssistants APIを活用して文脈に沿った応答を提供します。
+                また、ユーザーデータとチャット履歴はFirebaseにて管理されています。
+            </p>
+
+            <h2>📘 プロジェクト概要</h2>
+            <p>
+                MindMentorは、学習者にとってスケーラブルかつアクセス可能な教育体験を提供するために開発された、
+                AI搭載の教育プラットフォームです。
+            </p>
+
+            <h2>🎯 主な機能</h2>
+            <ul>
+                <li>生徒は登録された教科の中から選択し、AIチューターと対話を開始できます。</li>
+                <li>スレッド形式での会話により、自然で継続的な学習が可能です。</li>
+                <li>会話の文脈を保持し、フォローアップの質問にも対応できます。</li>
+                <li>チャット履歴は教科・日付ごとに整理され、復習に役立ちます。</li>
+                <li>学習進捗が可視化され、自己管理型の学習が促進されます。</li>
+            </ul>
+
+            <h2>⚙️ 技術スタック</h2>
+            <ul>
+                <li>フロントエンド：React</li>
+                <li>バックエンド：FastAPI</li>
+                <li>AIエンジン：OpenAI Assistants API</li>
+                <li>データベース／ストレージ：Firebase</li>
+            </ul>
+
+            <h2>🧪 現在の技術的課題と検討事項</h2>
+            <ul>
+                <li>資料ベースの質問応答：アップロードされたドキュメントに基づき、明確かつ簡潔な応答を行います。</li>
+                <li>会話の文脈維持：セッション内で会話の流れを維持します。</li>
+                <li>高速応答：原則として1〜3秒以内に応答。</li>
+                <li>学習内容のインデックス作成：資料の目次をもとにインデックスを作成。</li>
+                <li>学習履歴の整理：過去の会話は教科・日付別に保存。</li>
+                <li>文脈に基づく回答：教科・トピックに応じた意味のある応答。</li>
+            </ul>
+
+            <h2>🎓 ユースケース</h2>
+            <ul>
+                <li>生徒が学校から帰宅し、「今日習ったトピック」を入力するとAIチューターが対応。</li>
+                <li>学習内容の復習サポート</li>
+                <li>短いクイズ形式で理解度をチェック</li>
+                <li>結果に基づき、フィードバックを提供（理解できている点、苦手な点の明示）</li>
+                <li>AIチューターは実際の先生のように学習を支援、理解度向上と自主的な学びをサポート</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Olaf0321. All rights reserved.
+        <a href="https://github.com/Olaf0321/Mind-Mentor-AI">GitHub</a>
+    </footer>
+
+</body>
+
+</html>
