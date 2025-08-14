@@ -161,6 +161,25 @@ footer a:hover {
     margin-bottom: 8px;
 }
 
+footer {
+    background: rgba(0,0,0,0.8);
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+footer a {
+    color: #00ff99;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
 
 /* レスポンシブ */
 @media (max-width: 768px) {
