@@ -84,69 +84,6 @@
                 <li>AIチューターは実際の先生のように学習を支援、理解度向上と自主的な学びをサポート</li>
             </ul>
         </div>
-        
-<form id="myForm" style="display:flex; flex-direction:column; gap:20px; width:300px; margin:40px auto; font-family:sans-serif;">
-
-  <div style="display:flex; align-items:center; justify-content:flex-start; gap:10px;">
-    <label style="flex:0 0 80px; text-align:left;">num:</label>
-    <input type="text" name="num" required
-      style="flex:1; padding:8px; border:1px solid #ccc; border-radius:6px; font-size:14px;">
-  </div>
-
-  <div style="display:flex; align-items:center; justify-content:flex-start; gap:10px;">
-    <label style="flex:0 0 80px; text-align:left;">apiKey:</label>
-    <input type="text" id="apiKey" name="apiKey" required
-      style="flex:1; padding:8px; border:1px solid #ccc; border-radius:6px; font-size:14px;">
-  </div>
-  <button type="submit"
-    style="padding:10px 16px; background:#4a90e2; color:#fff; border:none; border-radius:6px; font-size:15px; cursor:pointer;">
-    送信
-  </button>
-</form>
-
-<script>
-document.getElementById("myForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const formData = new FormData(form);
-    const jsonData = {};
-
-    // Convert form fields to JSON, excluding apiKey
-    for (let [key, value] of formData.entries()) {
-        if (key !== "apiKey") {
-            jsonData[key] = value;
-        }
-    }
-
-    const apiKey = formData.get("apiKey");
-    const domainName = window.location.hostname;
-
-    try {
-        const res = await fetch("http://localhost:8080/variableTask/6/1", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${apiKey}`,
-                "X-Domain-Name": domainName
-            },
-            body: JSON.stringify(jsonData)
-        });
-
-        const result = await res.json();
-        console.log("Backend response:", result);
-
-        if (result.status && result.status === 'success') {
-            alert("送信成功しました!");
-        } else {
-            alert("送信に失敗しました。!");
-        }
-    } catch (err) {
-        console.error("Error:", err);
-        alert("ネットワークエラーのため送信に失敗しました。");
-    }
-});
-</script>
 
     </main>
 
